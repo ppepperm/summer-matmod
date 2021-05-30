@@ -7,5 +7,6 @@ https://colab.research.google.com/drive/1exHaMNdWxzyWvpuWjDffojThAfZoZkIM#scroll
 ### Настройка окружения
 #
 git clone https://github.com/ultralytics/yolov5 
+#
 pip install -U -r yolov5/requirements.txt
 
