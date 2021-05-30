@@ -8,7 +8,6 @@ Original file is located at
 
 #Install Dependencies
 
-_(Remember to choose GPU in Runtime if not already selected. Runtime --> Change Runtime Type --> Hardware accelerator --> GPU)_
 """
 
 !rm -rf ./yolov5/runs ./yolov5/weights
@@ -197,8 +196,7 @@ Run inference with a pretrained checkpoint on contents of `test/images` folder d
 # %cd /content/yolov5/
 !python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 640 --conf 0.4 --source ../valid/images
 
-from google.colab import drive
-drive.mount('/content/drive')
+
 
 #display inference on ALL test images
 #this looks much better with longer training above
@@ -215,8 +213,6 @@ for imageName in glob.glob('/content/yolov5/runs/detect/exp/*.jpg'): #assuming J
 Now that you have trained your custom detector, you can export the trained weights you have made here for inference on your device elsewhere
 """
 
-from google.colab import drive
-drive.mount('/content/gdrive')
 
 # Commented out IPython magic to ensure Python compatibility.
 # %cp /content/yolov5/runs/train/yolov5s_results/weights/best.pt /content/gdrive/My\ Drive
@@ -227,7 +223,7 @@ display(Image(filename="/content/yolov5/runs/train/yolov5s_results/confusion_mat
 
 Hope you enjoyed this!
 
---Team [Roboflow](https://roboflow.ai)
+
 """
 
 !ls
